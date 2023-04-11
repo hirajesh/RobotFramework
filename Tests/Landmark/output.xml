@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on darwin)" generated="20230410 15:35:54.718" rpa="false" schemaversion="3">
+<suite id="s1" name="CODPaymentTest" source="/Users/rajesh/PycharmProjects/pythonProjectrobot/Tests/Landmark/CODPaymentTest.robot">
+<test id="s1-t1" name="TC_001_Verify That The Register User Is Able To Place COD Order With Home Delivery Shipping Method" line="29">
+<kw name="Open The Web Browser" library="WebBrowser" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230410 15:35:55.019" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f7d4d8b8fd0&gt;</msg>
+<status status="PASS" starttime="20230410 15:35:55.018" endtime="20230410 15:35:55.019"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${userAgent}</var>
+<arg>--user-agent=AASA-Bot/2.0.0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230410 15:35:55.019" level="INFO">${userAgent} = --user-agent=AASA-Bot/2.0.0</msg>
+<status status="PASS" starttime="20230410 15:35:55.019" endtime="20230410 15:35:55.019"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${userAgent}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230410 15:35:55.019" endtime="20230410 15:35:55.019"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of a WebDriver.</doc>
+<msg timestamp="20230410 15:35:55.020" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" starttime="20230410 15:35:55.020" endtime="20230410 15:35:56.676"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 15:35:56.677" endtime="20230410 15:35:57.142"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Environment}&quot; == &quot;UAT1&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Homecentre_Uat1_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.143" endtime="20230410 15:35:57.143"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.143" endtime="20230410 15:35:57.143"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Max_Uat1_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.143" endtime="20230410 15:35:57.143"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.143" endtime="20230410 15:35:57.143"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Centrepoint_Uat1_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Babyshop_Uat1_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.144" endtime="20230410 15:35:57.144"/>
+</branch>
+<status status="NOT RUN" starttime="20230410 15:35:57.143" endtime="20230410 15:35:57.144"/>
+</if>
+<status status="NOT RUN" starttime="20230410 15:35:57.142" endtime="20230410 15:35:57.145"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;BETA&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 15:35:57.150" endtime="20230410 15:35:57.150"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.145" endtime="20230410 15:35:57.150"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 15:35:57.156" endtime="20230410 15:35:57.156"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.150" endtime="20230410 15:35:57.156"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 15:35:57.161" endtime="20230410 15:35:57.161"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.156" endtime="20230410 15:35:57.161"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 15:35:57.166" endtime="20230410 15:35:57.166"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.161" endtime="20230410 15:35:57.166"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.166" endtime="20230410 15:35:57.166"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.166" endtime="20230410 15:35:57.166"/>
+</branch>
+<status status="NOT RUN" starttime="20230410 15:35:57.145" endtime="20230410 15:35:57.166"/>
+</if>
+<status status="NOT RUN" starttime="20230410 15:35:57.145" endtime="20230410 15:35:57.166"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;PROD&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Homecentre_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:35:57.166" endtime="20230410 15:35:57.166"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:35:57.166" endtime="20230410 15:35:57.166"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Max_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<msg timestamp="20230410 15:35:57.167" level="INFO">Opening url 'https://www.maxfashion.com/ae/en/'</msg>
+<status status="PASS" starttime="20230410 15:35:57.167" endtime="20230410 15:36:02.807"/>
+</kw>
+<status status="PASS" starttime="20230410 15:35:57.166" endtime="20230410 15:36:02.807"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Centrepoint_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:02.807" endtime="20230410 15:36:02.807"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:36:02.807" endtime="20230410 15:36:02.807"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Babyshop_URL}</arg>
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:02.807" endtime="20230410 15:36:02.816"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:36:02.807" endtime="20230410 15:36:02.816"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:02.816" endtime="20230410 15:36:02.817"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:36:02.816" endtime="20230410 15:36:02.817"/>
+</branch>
+<status status="PASS" starttime="20230410 15:35:57.166" endtime="20230410 15:36:02.817"/>
+</if>
+<status status="PASS" starttime="20230410 15:35:57.166" endtime="20230410 15:36:02.817"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the environment name and verify you are given proper environment name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:02.817" endtime="20230410 15:36:02.817"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 15:36:02.817" endtime="20230410 15:36:02.817"/>
+</branch>
+<status status="PASS" starttime="20230410 15:35:57.142" endtime="20230410 15:36:02.817"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 15:36:02.817" endtime="20230410 15:36:02.820"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets Selenium 2's default implicit wait in seconds and
+sets the implicit wait for all open browsers.</doc>
+<status status="PASS" starttime="20230410 15:36:02.820" endtime="20230410 15:36:02.821"/>
+</kw>
+<status status="PASS" starttime="20230410 15:35:55.018" endtime="20230410 15:36:02.821"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230410 15:36:04.585" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="home_page.png"&gt;&lt;img src="home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230410 15:36:02.821" endtime="20230410 15:36:04.585"/>
+</kw>
+<kw name="Navigate To Sing-In Page" library="SignInPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SignInLink}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230410 15:36:06.338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230410 15:36:04.586" endtime="20230410 15:36:06.338"/>
+</kw>
+<msg timestamp="20230410 15:36:06.338" level="FAIL">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpath'</msg>
+<status status="FAIL" starttime="20230410 15:36:04.586" endtime="20230410 15:36:06.345"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignInLink}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:06.345" endtime="20230410 15:36:06.345"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${page_title}</var>
+<doc>Returns title of current page.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:06.346" endtime="20230410 15:36:06.346"/>
+</kw>
+<return>
+<value>${page_title}</value>
+<status status="NOT RUN" starttime="20230410 15:36:06.346" endtime="20230410 15:36:06.346"/>
+</return>
+<kw name="Log" library="BuiltIn">
+<arg>${page_title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 15:36:06.346" endtime="20230410 15:36:06.346"/>
+</kw>
+<status status="FAIL" starttime="20230410 15:36:04.586" endtime="20230410 15:36:06.346"/>
+</kw>
+<kw name="Verify Sign In Page Details" library="SignInPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.347" endtime="20230410 15:36:06.347"/>
+</kw>
+<kw name="Enter Valid UserName And Password Then Click Submit" library="SignInPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.347" endtime="20230410 15:36:06.347"/>
+</kw>
+<kw name="Click Basket button" library="SignInPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.347" endtime="20230410 15:36:06.347"/>
+</kw>
+<kw name="Search Valid keyword In Search Bar" library="SearchPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.347" endtime="20230410 15:36:06.347"/>
+</kw>
+<kw name="Choose Product From PLP Page" library="SearchPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.347" endtime="20230410 15:36:06.348"/>
+</kw>
+<kw name="Select The Size And Click Add To Basket Button in PDP Page" library="PDPPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.348" endtime="20230410 15:36:06.348"/>
+</kw>
+<kw name="Click Checkout Now Button In Pre Basket Page" library="BasketPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.348" endtime="20230410 15:36:06.348"/>
+</kw>
+<kw name="Click Checkout Now Button In Basket Page" library="BasketPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.348" endtime="20230410 15:36:06.348"/>
+</kw>
+<kw name="Verify Shipping Methods Details" library="PaymentPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.348" endtime="20230410 15:36:06.348"/>
+</kw>
+<kw name="Choose Home Delivery As A Shipping Method" library="PaymentPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.349" endtime="20230410 15:36:06.349"/>
+</kw>
+<kw name="Choose COD Payment" library="PaymentPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.349" endtime="20230410 15:36:06.349"/>
+</kw>
+<kw name="Verify Order Summary Details" library="PaymentPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.349" endtime="20230410 15:36:06.349"/>
+</kw>
+<kw name="Click Place Order Button" library="PaymentPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.349" endtime="20230410 15:36:06.349"/>
+</kw>
+<kw name="Close Rating POP-UP Window In Thank You Page" library="ThankYouPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.349" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Click Order Number HyperLink" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.350" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Capture Order Number" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.350" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Click Cancel Items Link" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.350" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Click Select All Product Checkbox" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.350" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Choose Cancel Reason" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.350" endtime="20230410 15:36:06.350"/>
+</kw>
+<kw name="Click Cancel Button And Cancel The Order" library="OrderDetailsPage">
+<status status="NOT RUN" starttime="20230410 15:36:06.351" endtime="20230410 15:36:06.351"/>
+</kw>
+<kw name="Close The WebBrowser" library="WebBrowser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230410 15:36:06.351" endtime="20230410 15:36:06.447"/>
+</kw>
+<status status="PASS" starttime="20230410 15:36:06.351" endtime="20230410 15:36:06.447"/>
+</kw>
+<doc>This script will execute place the reg user hd cod order : Areas Covered [Sign-in,Search,PLP,PDP,Add To Basket,Checkout Now,Choose HD,Choose COD Payment, Place the order]</doc>
+<tag>Max - ae -</tag>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20230410 15:35:55.017" endtime="20230410 15:36:06.447">AttributeError: 'WebDriver' object has no attribute 'find_elements_by_xpath'</status>
+</test>
+<status status="FAIL" starttime="20230410 15:35:54.720" endtime="20230410 15:36:06.448"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Max - ae -</stat>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CODPaymentTest">CODPaymentTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

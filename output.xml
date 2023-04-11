@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.5 on darwin)" generated="20230410 19:54:18.254" rpa="false" schemaversion="3">
+<suite id="s1" name="CODPaymentTest" source="/Users/rajesh/PycharmProjects/pythonProjectrobot/Tests/Landmark/CODPaymentTest.robot">
+<test id="s1-t1" name="TC_001_Verify That The Register User Is Able To Place COD Order With Home Delivery Shipping Method" line="29">
+<kw name="Open The Web Browser" library="WebBrowser" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230410 19:54:18.565" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10c2bb370&gt;</msg>
+<status status="PASS" starttime="20230410 19:54:18.565" endtime="20230410 19:54:18.565"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${userAgent}</var>
+<arg>--user-agent=AASA-Bot/2.0.0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230410 19:54:18.566" level="INFO">${userAgent} = --user-agent=AASA-Bot/2.0.0</msg>
+<status status="PASS" starttime="20230410 19:54:18.566" endtime="20230410 19:54:18.566"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${userAgent}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230410 19:54:18.566" endtime="20230410 19:54:18.566"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>chrome_options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230410 19:54:18.566" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230410 19:54:18.566" endtime="20230410 19:54:20.249"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 19:54:20.250" endtime="20230410 19:54:20.732"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Environment}&quot; == &quot;UAT1&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Homecentre_Uat1_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.733" endtime="20230410 19:54:20.733"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.732" endtime="20230410 19:54:20.733"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Max_Uat1_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.733" endtime="20230410 19:54:20.733"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.733" endtime="20230410 19:54:20.733"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Centrepoint_Uat1_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.733" endtime="20230410 19:54:20.734"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.733" endtime="20230410 19:54:20.734"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Babyshop_Uat1_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.734" endtime="20230410 19:54:20.734"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.734" endtime="20230410 19:54:20.734"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.734" endtime="20230410 19:54:20.734"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.734" endtime="20230410 19:54:20.734"/>
+</branch>
+<status status="NOT RUN" starttime="20230410 19:54:20.732" endtime="20230410 19:54:20.734"/>
+</if>
+<status status="NOT RUN" starttime="20230410 19:54:20.732" endtime="20230410 19:54:20.734"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;BETA&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 19:54:20.741" endtime="20230410 19:54:20.741"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.735" endtime="20230410 19:54:20.741"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 19:54:20.745" endtime="20230410 19:54:20.745"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.741" endtime="20230410 19:54:20.745"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 19:54:20.749" endtime="20230410 19:54:20.750"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.745" endtime="20230410 19:54:20.750"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Goto ${Homecentre_Beta_URL}">
+<status status="NOT RUN" starttime="20230410 19:54:20.755" endtime="20230410 19:54:20.755"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.750" endtime="20230410 19:54:20.755"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:20.756" endtime="20230410 19:54:20.756"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:20.756" endtime="20230410 19:54:20.756"/>
+</branch>
+<status status="NOT RUN" starttime="20230410 19:54:20.735" endtime="20230410 19:54:20.756"/>
+</if>
+<status status="NOT RUN" starttime="20230410 19:54:20.735" endtime="20230410 19:54:20.756"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;PROD&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Homecentre_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230410 19:54:20.757" level="INFO">Opening url 'https://www.homecentre.com/ae/en'</msg>
+<status status="PASS" starttime="20230410 19:54:20.757" endtime="20230410 19:54:24.825"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:20.757" endtime="20230410 19:54:24.825"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Max_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:24.826" endtime="20230410 19:54:24.826"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:24.825" endtime="20230410 19:54:24.826"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Centrepoint_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:24.826" endtime="20230410 19:54:24.827"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:24.826" endtime="20230410 19:54:24.827"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Babyshop_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:24.828" endtime="20230410 19:54:24.828"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:24.827" endtime="20230410 19:54:24.828"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:24.828" endtime="20230410 19:54:24.828"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:24.828" endtime="20230410 19:54:24.828"/>
+</branch>
+<status status="PASS" starttime="20230410 19:54:20.757" endtime="20230410 19:54:24.828"/>
+</if>
+<status status="PASS" starttime="20230410 19:54:20.757" endtime="20230410 19:54:24.828"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the environment name and verify you are given proper environment name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:24.828" endtime="20230410 19:54:24.828"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:24.828" endtime="20230410 19:54:24.828"/>
+</branch>
+<status status="PASS" starttime="20230410 19:54:20.732" endtime="20230410 19:54:24.829"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230410 19:54:24.829" endtime="20230410 19:54:24.834"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230410 19:54:24.834" endtime="20230410 19:54:24.837"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:18.564" endtime="20230410 19:54:24.837"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>home_page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230410 19:54:25.812" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="home_page.png"&gt;&lt;img src="home_page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230410 19:54:24.837" endtime="20230410 19:54:25.812"/>
+</kw>
+<kw name="Navigate To Sing-In Page" library="SignInPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SignInLink}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 19:54:25.814" endtime="20230410 19:54:25.892"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignInLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:25.894" level="INFO">Clicking element 'id:account-actions-signin'.</msg>
+<status status="PASS" starttime="20230410 19:54:25.893" endtime="20230410 19:54:30.354"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${page_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230410 19:54:30.364" level="INFO">${page_title} = Online Shopping at Home Centre</msg>
+<status status="PASS" starttime="20230410 19:54:30.354" endtime="20230410 19:54:30.364"/>
+</kw>
+<return>
+<value>${page_title}</value>
+<status status="PASS" starttime="20230410 19:54:30.364" endtime="20230410 19:54:30.364"/>
+</return>
+<kw name="Log" library="BuiltIn">
+<arg>${page_title}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:30.364" endtime="20230410 19:54:30.364"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:25.813" endtime="20230410 19:54:30.364"/>
+</kw>
+<kw name="Verify Sign In Page Details" library="SignInPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign In Now</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230410 19:54:30.397" level="INFO">Current page contains text 'Sign In Now'.</msg>
+<status status="PASS" starttime="20230410 19:54:30.365" endtime="20230410 19:54:30.397"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${SignPageText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.422" level="INFO">${text} = Sign In Now</msg>
+<status status="PASS" starttime="20230410 19:54:30.397" endtime="20230410 19:54:30.422"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${text}</arg>
+<arg>${SignInPage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.422" endtime="20230410 19:54:30.422"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.423" level="INFO">Sign In Now</msg>
+<status status="PASS" starttime="20230410 19:54:30.422" endtime="20230410 19:54:30.423"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${FBButton}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:54:30.441" level="INFO">Element 'id:standalone-signin-facebook' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:54:30.423" endtime="20230410 19:54:30.441"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${FBButton} FB button displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.441" level="INFO">id:standalone-signin-facebook FB button displayed</msg>
+<status status="PASS" starttime="20230410 19:54:30.441" endtime="20230410 19:54:30.441"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${UsernameTextBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:54:30.454" level="INFO">Element 'id:standalone-j_username' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:54:30.441" endtime="20230410 19:54:30.454"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${UsernameTextBox} Username button displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.454" level="INFO">id:standalone-j_username Username button displayed</msg>
+<status status="PASS" starttime="20230410 19:54:30.454" endtime="20230410 19:54:30.454"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PasswordTextBox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:54:30.468" level="INFO">Element 'id:standalone-j_password' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:54:30.454" endtime="20230410 19:54:30.468"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${UsernameTextBox} Password button displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.469" level="INFO">id:standalone-j_username Password button displayed</msg>
+<status status="PASS" starttime="20230410 19:54:30.468" endtime="20230410 19:54:30.469"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${fbtext}</var>
+<arg>${FBButton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.485" level="INFO">${fbtext} = Sign in with Facebook</msg>
+<status status="PASS" starttime="20230410 19:54:30.469" endtime="20230410 19:54:30.485"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${fbtext}</arg>
+<arg>${FBMessage}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.485" endtime="20230410 19:54:30.485"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${fbtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.486" level="INFO">Sign in with Facebook</msg>
+<status status="PASS" starttime="20230410 19:54:30.485" endtime="20230410 19:54:30.486"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${emailtext}</var>
+<arg>${EmailLable}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.502" level="INFO">${emailtext} = Your Email</msg>
+<status status="PASS" starttime="20230410 19:54:30.486" endtime="20230410 19:54:30.502"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${emailtext}</arg>
+<arg>${EmailText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.502" endtime="20230410 19:54:30.502"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${emailtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.502" level="INFO">Your Email</msg>
+<status status="PASS" starttime="20230410 19:54:30.502" endtime="20230410 19:54:30.502"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${passwordtext}</var>
+<arg>${PasswordLable}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.524" level="INFO">${passwordtext} = Password</msg>
+<status status="PASS" starttime="20230410 19:54:30.503" endtime="20230410 19:54:30.524"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${passwordtext}</arg>
+<arg>${PwdText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.524" endtime="20230410 19:54:30.524"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${passwordtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.525" level="INFO">Password</msg>
+<status status="PASS" starttime="20230410 19:54:30.524" endtime="20230410 19:54:30.525"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${logintext}</var>
+<arg>${Loginbutton}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.545" level="INFO">${logintext} = Sign In</msg>
+<status status="PASS" starttime="20230410 19:54:30.525" endtime="20230410 19:54:30.545"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${logintext}</arg>
+<arg>${SignInButtonText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.545" endtime="20230410 19:54:30.545"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${logintext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.545" level="INFO">Sign In</msg>
+<status status="PASS" starttime="20230410 19:54:30.545" endtime="20230410 19:54:30.545"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${donthaveaccounttext}</var>
+<arg>${Donthaveanaccount}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.567" level="INFO">${donthaveaccounttext} = Don't have an account?  Sign up for one</msg>
+<status status="PASS" starttime="20230410 19:54:30.546" endtime="20230410 19:54:30.567"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${donthaveaccounttext}</arg>
+<arg>${DonthaveanaccountText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:54:30.568" endtime="20230410 19:54:30.568"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${logintext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:54:30.569" level="INFO">Sign In</msg>
+<status status="PASS" starttime="20230410 19:54:30.569" endtime="20230410 19:54:30.569"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:30.364" endtime="20230410 19:54:30.569"/>
+</kw>
+<kw name="Enter Valid UserName And Password Then Click Submit" library="SignInPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${UsernameTextBox}</arg>
+<arg>${ValidUserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.571" level="INFO">Typing text 'robotauto@gmail.com' into text field 'id:standalone-j_username'.</msg>
+<status status="PASS" starttime="20230410 19:54:30.570" endtime="20230410 19:54:30.716"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PasswordTextBox}</arg>
+<arg>${ValidPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.716" level="INFO">Typing text '123456' into text field 'id:standalone-j_password'.</msg>
+<status status="PASS" starttime="20230410 19:54:30.716" endtime="20230410 19:54:30.807"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Loginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:30.808" level="INFO">Clicking element 'id:standalone-signin-form-submit'.</msg>
+<status status="PASS" starttime="20230410 19:54:30.807" endtime="20230410 19:54:30.922"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:54:33.923" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 19:54:30.923" endtime="20230410 19:54:33.923"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:30.570" endtime="20230410 19:54:33.924"/>
+</kw>
+<kw name="Click Basket button" library="SignInPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BasketLogo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:33.925" level="INFO">Clicking element 'xpath://*[@id='small-cart']/a[1]'.</msg>
+<status status="PASS" starttime="20230410 19:54:33.924" endtime="20230410 19:54:34.389"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:33.924" endtime="20230410 19:54:34.389"/>
+</kw>
+<kw name="Search Valid keyword In Search Bar" library="SearchPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230410 19:54:34.389" endtime="20230410 19:54:53.304"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${Search_Homecentre}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:53.305" level="INFO">Typing text 'Bottle' into text field 'id:js-site-search-input'.</msg>
+<status status="PASS" starttime="20230410 19:54:53.304" endtime="20230410 19:54:53.425"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230410 19:54:53.426" level="INFO">Sending key(s) ('RETURN',) to id:js-site-search-input element.</msg>
+<msg timestamp="20230410 19:54:53.716" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230410 19:54:53.716" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230410 19:54:53.425" endtime="20230410 19:54:55.091"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:53.304" endtime="20230410 19:54:55.091"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${Search_Max}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.091" endtime="20230410 19:54:55.091"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.091" endtime="20230410 19:54:55.091"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:55.091" endtime="20230410 19:54:55.091"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${Search_Babyshop}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.097" endtime="20230410 19:54:55.097"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:55.091" endtime="20230410 19:54:55.098"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${Search_Centrepoint}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the search keyword</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:55.098" endtime="20230410 19:54:55.098"/>
+</branch>
+<status status="PASS" starttime="20230410 19:54:53.304" endtime="20230410 19:54:55.098"/>
+</if>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:54:58.100" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 19:54:55.098" endtime="20230410 19:54:58.100"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:34.389" endtime="20230410 19:54:58.100"/>
+</kw>
+<kw name="Choose Product From PLP Page" library="SearchPage">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${MaxProductList}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:58.101" endtime="20230410 19:54:58.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elements}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:54:58.101" endtime="20230410 19:54:58.101"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:54:58.101" endtime="20230410 19:54:58.101"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${ProductLists}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230410 19:54:58.119" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="0d6d6568-3490-4437-b4fc-5809cb0aecdf")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230410 19:54:58.102" endtime="20230410 19:54:58.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elements}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:54:58.120" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="1ef4302b-6d51-4248-8b39-cbc56959cc41")&gt;'.</msg>
+<status status="PASS" starttime="20230410 19:54:58.120" endtime="20230410 19:55:00.147"/>
+</kw>
+<status status="PASS" starttime="20230410 19:54:58.101" endtime="20230410 19:55:00.147"/>
+</branch>
+<status status="PASS" starttime="20230410 19:54:58.101" endtime="20230410 19:55:00.147"/>
+</if>
+<status status="PASS" starttime="20230410 19:54:58.100" endtime="20230410 19:55:00.147"/>
+</kw>
+<kw name="Select The Size And Click Add To Basket Button in PDP Page" library="PDPPage">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SizeList_Max}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SizeList_Max} Size Chart Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${size}</var>
+<arg>${SizeList_Max}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${size}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:55:00.147" endtime="20230410 19:55:00.148"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SizeList_Centrepoint}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SizeList_Centrepoint} Size Chart Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.148"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${size}</var>
+<arg>${SizeList_Centrepoint}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${size}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.149"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:55:00.148" endtime="20230410 19:55:00.149"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Splash&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SizeList_Centrepoint}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.149"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SizeList_Centrepoint} Size Chart Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.149"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${size}</var>
+<arg>${SizeList_Centrepoint}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${size}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.150" endtime="20230410 19:55:00.150"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:55:00.149" endtime="20230410 19:55:00.150"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Sorry Size is not available !!!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:00.150" level="INFO">Sorry Size is not available !!!</msg>
+<status status="PASS" starttime="20230410 19:55:00.150" endtime="20230410 19:55:00.151"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:00.150" endtime="20230410 19:55:00.151"/>
+</branch>
+<status status="PASS" starttime="20230410 19:55:00.147" endtime="20230410 19:55:00.151"/>
+</if>
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${AddToBasket_Max}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.151"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AddToBasket_Max} Add To Basket Button Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.151"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${addToBasket_Maxtext}</var>
+<arg>${AddToBasket_Max}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.151"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${addToBasket_Maxtext}</arg>
+<arg>${AddtoBasketMaxText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.152"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${addToBasket_Maxtext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.152" endtime="20230410 19:55:00.152"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddToBasket_Max}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230410 19:55:00.152" endtime="20230410 19:55:00.152"/>
+</kw>
+<status status="NOT RUN" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.152"/>
+</branch>
+<branch type="ELSE">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${AddToBasket}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:00.182" level="INFO">Element 'xpath://*[@class='show old-button-set']//button[@id='product-actions-btn-add']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:00.152" endtime="20230410 19:55:00.182"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${AddToBasket} Add To Basket Button Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:00.183" level="INFO">xpath://*[@class='show old-button-set']//button[@id='product-actions-btn-add'] Add To Basket Button Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:00.182" endtime="20230410 19:55:00.183"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textaddToBasket}</var>
+<arg>${AddToBasket}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:00.204" level="INFO">${textaddToBasket} = Add to Basket</msg>
+<status status="PASS" starttime="20230410 19:55:00.183" endtime="20230410 19:55:00.204"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${textaddToBasket}</arg>
+<arg>${textaddToBasket}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:00.204" endtime="20230410 19:55:00.204"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textaddToBasket}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:00.204" level="INFO">Add to Basket</msg>
+<status status="PASS" starttime="20230410 19:55:00.204" endtime="20230410 19:55:00.204"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${AddToBasket}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:00.217" level="INFO">Element 'xpath://*[@class='show old-button-set']//button[@id='product-actions-btn-add']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:00.204" endtime="20230410 19:55:00.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddToBasket}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:00.218" level="INFO">Clicking element 'xpath://*[@class='show old-button-set']//button[@id='product-actions-btn-add']'.</msg>
+<status status="PASS" starttime="20230410 19:55:00.217" endtime="20230410 19:55:00.289"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:00.152" endtime="20230410 19:55:00.289"/>
+</branch>
+<status status="PASS" starttime="20230410 19:55:00.151" endtime="20230410 19:55:00.289"/>
+</if>
+<status status="PASS" starttime="20230410 19:55:00.147" endtime="20230410 19:55:00.290"/>
+</kw>
+<kw name="Click Checkout Now Button In Pre Basket Page" library="BasketPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CheckoutNow}</arg>
+<arg>timeout=20</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:02.254" level="INFO">Element 'xpath://*[normalize-space(text())='Checkout Now']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:00.290" endtime="20230410 19:55:02.254"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CheckoutNow} CheckoutNow button displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:02.254" level="INFO">xpath://*[normalize-space(text())='Checkout Now'] CheckoutNow button displayed</msg>
+<status status="PASS" starttime="20230410 19:55:02.254" endtime="20230410 19:55:02.254"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CheckoutNow}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:02.255" level="INFO">Clicking element 'xpath://*[normalize-space(text())='Checkout Now']'.</msg>
+<status status="PASS" starttime="20230410 19:55:02.254" endtime="20230410 19:55:04.520"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:00.290" endtime="20230410 19:55:04.520"/>
+</kw>
+<kw name="Click Checkout Now Button In Basket Page" library="BasketPage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CheckoutNow}</arg>
+<arg>timeout=20</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:04.558" level="INFO">Element 'xpath://*[normalize-space(text())='Checkout Now']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:04.520" endtime="20230410 19:55:04.558"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CheckoutNow} CheckoutNow button displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:04.559" level="INFO">xpath://*[normalize-space(text())='Checkout Now'] CheckoutNow button displayed</msg>
+<status status="PASS" starttime="20230410 19:55:04.558" endtime="20230410 19:55:04.559"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CheckoutNow}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:04.559" level="INFO">Clicking element 'xpath://*[normalize-space(text())='Checkout Now']'.</msg>
+<status status="PASS" starttime="20230410 19:55:04.559" endtime="20230410 19:55:08.327"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:04.520" endtime="20230410 19:55:08.328"/>
+</kw>
+<kw name="Verify Shipping Methods Details" library="PaymentPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:13.329" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:08.328" endtime="20230410 19:55:13.329"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Shippingmethod}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:13.352" level="INFO">Element 'xpath://ul[@class='shipping-tabs']/li' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:13.330" endtime="20230410 19:55:13.352"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Shippingmethod} Shipping method displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:13.352" level="INFO">xpath://ul[@class='shipping-tabs']/li Shipping method displayed</msg>
+<status status="PASS" starttime="20230410 19:55:13.352" endtime="20230410 19:55:13.353"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${Shippingmethod}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230410 19:55:13.357" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="a1773a40-f516-4954-a6ea-ed45afe90a58")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230410 19:55:13.353" endtime="20230410 19:55:13.357"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${elements}[0]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:13.362" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="a1773a40-f516-4954-a6ea-ed45afe90a58")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:13.357" endtime="20230410 19:55:13.362"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${UsernameTextBox} CNC Shipping Method Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:13.362" level="INFO">id:standalone-j_username CNC Shipping Method Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:13.362" endtime="20230410 19:55:13.362"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${elements}[1]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:13.367" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="3ff763fd-96c2-47e5-86fd-760cdfed87c8")&gt;' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:13.362" endtime="20230410 19:55:13.367"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${UsernameTextBox} Home Delivery Shipping Method Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:13.368" level="INFO">id:standalone-j_username Home Delivery Shipping Method Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:13.367" endtime="20230410 19:55:13.368"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${cnctext}</var>
+<arg>${ClickAndCollectHeading}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:13.384" level="INFO">${cnctext} = Click &amp; Collect</msg>
+<status status="PASS" starttime="20230410 19:55:13.368" endtime="20230410 19:55:13.384"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${cnctext}</arg>
+<arg>${CncText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:13.384" endtime="20230410 19:55:13.385"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cnctext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:13.385" level="INFO">Click &amp; Collect</msg>
+<status status="PASS" starttime="20230410 19:55:13.385" endtime="20230410 19:55:13.385"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${hometext}</var>
+<arg>${HomeDeliveryHeading}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:13.403" level="INFO">${hometext} = Home Delivery</msg>
+<status status="PASS" starttime="20230410 19:55:13.385" endtime="20230410 19:55:13.404"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${hometext}</arg>
+<arg>${HdText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:13.404" endtime="20230410 19:55:13.404"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${hometext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:13.404" level="INFO">Home Delivery</msg>
+<status status="PASS" starttime="20230410 19:55:13.404" endtime="20230410 19:55:13.404"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:08.328" endtime="20230410 19:55:13.404"/>
+</kw>
+<kw name="Choose Home Delivery As A Shipping Method" library="PaymentPage">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>${Shippingmethod}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230410 19:55:13.410" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="a1773a40-f516-4954-a6ea-ed45afe90a58")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230410 19:55:13.405" endtime="20230410 19:55:13.411"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elements}[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:13.411" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4fc9b4b2381b841c73c81cd9983b9fba", element="3ff763fd-96c2-47e5-86fd-760cdfed87c8")&gt;'.</msg>
+<status status="PASS" starttime="20230410 19:55:13.411" endtime="20230410 19:55:13.449"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:13.404" endtime="20230410 19:55:13.450"/>
+</kw>
+<kw name="Choose COD Payment" library="PaymentPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:16.451" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:13.450" endtime="20230410 19:55:16.451"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${COD}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:16.471" level="INFO">Element 'xpath://label[@for='cod-order-input']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:16.451" endtime="20230410 19:55:16.471"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${COD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:16.472" level="INFO">Clicking element 'xpath://label[@for='cod-order-input']'.</msg>
+<status status="PASS" starttime="20230410 19:55:16.471" endtime="20230410 19:55:16.567"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:13.450" endtime="20230410 19:55:16.567"/>
+</kw>
+<kw name="Verify Order Summary Details" library="PaymentPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:21.569" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:16.568" endtime="20230410 19:55:21.569"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${YourOrderSummaryLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.590" level="INFO">Element 'xpath://div/strong[@id='summary-title']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.569" endtime="20230410 19:55:21.590"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${YourOrderSummaryLabel} Your Order Summary Label Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.590" level="INFO">xpath://div/strong[@id='summary-title'] Your Order Summary Label Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.590" endtime="20230410 19:55:21.590"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SubTotalLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.606" level="INFO">Element 'xpath://li/strong[@id='shopping-actions-subtotal-title']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.590" endtime="20230410 19:55:21.606"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${SubTotalLabel} SubTotal Label Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.606" level="INFO">xpath://li/strong[@id='shopping-actions-subtotal-title'] SubTotal Label Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.606" endtime="20230410 19:55:21.606"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${StandaradShippingmessgeLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.622" level="INFO">Element 'xpath://li[normalize-space(@class)='standardInfo']//strong[1]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.607" endtime="20230410 19:55:21.622"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${StandaradShippingmessgeLabel} Standarad Shipping messge Label Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.623" level="INFO">xpath://li[normalize-space(@class)='standardInfo']//strong[1] Standarad Shipping messge Label Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.622" endtime="20230410 19:55:21.623"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${StandaradShippingmessgeAmountText}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.641" level="INFO">Element 'xpath://li[normalize-space(@class)='standardInfo']//strong[2]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.623" endtime="20230410 19:55:21.641"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${StandaradShippingmessgeAmountText} Standarad Shipping Amount Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.641" level="INFO">xpath://li[normalize-space(@class)='standardInfo']//strong[2] Standarad Shipping Amount Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.641" endtime="20230410 19:55:21.641"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CODLable}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.657" level="INFO">Element 'xpath://li[@id='shopping-actions-total-item2']//strong[1]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.642" endtime="20230410 19:55:21.657"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CODLable} COD Charges Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.657" level="INFO">xpath://li[@id='shopping-actions-total-item2']//strong[1] COD Charges Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.657" endtime="20230410 19:55:21.657"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${CODAmountText}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.672" level="INFO">Element 'xpath://li[@id='shopping-actions-total-item2']//strong[2]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.657" endtime="20230410 19:55:21.672"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CODAmountText} COD Amount Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.672" level="INFO">xpath://li[@id='shopping-actions-total-item2']//strong[2] COD Amount Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.672" endtime="20230410 19:55:21.672"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TotalAmountLabel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.690" level="INFO">Element 'xpath://li[@id='shopping-actions-total-price-item']//strong[1]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.672" endtime="20230410 19:55:21.690"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TotalAmountLabel} Total Amount Label Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.690" level="INFO">xpath://li[@id='shopping-actions-total-price-item']//strong[1] Total Amount Label Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.690" endtime="20230410 19:55:21.690"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TotalAmountText}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:21.704" level="INFO">Element 'xpath://li[@id='shopping-actions-total-price-item']//strong[2]' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:21.690" endtime="20230410 19:55:21.704"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TotalAmountText} Total Amount Displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.704" level="INFO">xpath://li[@id='shopping-actions-total-price-item']//strong[2] Total Amount Displayed</msg>
+<status status="PASS" starttime="20230410 19:55:21.704" endtime="20230410 19:55:21.704"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${yourordersummary}</var>
+<arg>${YourOrderSummaryLabel}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.717" level="INFO">${yourordersummary} = Your order summary</msg>
+<status status="PASS" starttime="20230410 19:55:21.705" endtime="20230410 19:55:21.717"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${yourordersummary}</arg>
+<arg>${YourordersummaryText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:21.717" endtime="20230410 19:55:21.718"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${yourordersummary}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.718" level="INFO">Your order summary</msg>
+<status status="PASS" starttime="20230410 19:55:21.718" endtime="20230410 19:55:21.718"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${subtotaltext}</var>
+<arg>${SubTotalLabel}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.732" level="INFO">${subtotaltext} = Subtotal:</msg>
+<status status="PASS" starttime="20230410 19:55:21.718" endtime="20230410 19:55:21.732"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${subtotaltext}</arg>
+<arg>${SubtotalText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:21.732" endtime="20230410 19:55:21.732"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${subtotaltext}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.733" level="INFO">Subtotal:</msg>
+<status status="PASS" starttime="20230410 19:55:21.732" endtime="20230410 19:55:21.733"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${totalText}</var>
+<arg>${TotalAmountLabel}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.749" level="INFO">${totalText} = Total
+(Inclusive of any applicable VAT)</msg>
+<status status="PASS" starttime="20230410 19:55:21.733" endtime="20230410 19:55:21.749"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${totalText}</arg>
+<arg>${TotalText}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230410 19:55:21.749" endtime="20230410 19:55:21.749"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${totalText}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.750" level="INFO">Total
+(Inclusive of any applicable VAT)</msg>
+<status status="PASS" starttime="20230410 19:55:21.750" endtime="20230410 19:55:21.750"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${subTotalAmoun}</var>
+<arg>${SubTotalAmountText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.765" level="INFO">${subTotalAmoun} = AED 19</msg>
+<status status="PASS" starttime="20230410 19:55:21.750" endtime="20230410 19:55:21.765"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${stdshipping}</var>
+<arg>${StandaradShippingmessgeAmountText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.779" level="INFO">${stdshipping} = AED 18</msg>
+<status status="PASS" starttime="20230410 19:55:21.765" endtime="20230410 19:55:21.779"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${codAmoun}</var>
+<arg>${CODAmountText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.797" level="INFO">${codAmoun} = AED 10</msg>
+<status status="PASS" starttime="20230410 19:55:21.779" endtime="20230410 19:55:21.797"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${totalAmoun}</var>
+<arg>${TotalAmountText}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:21.812" level="INFO">${totalAmoun} = AED 47</msg>
+<status status="PASS" starttime="20230410 19:55:21.798" endtime="20230410 19:55:21.812"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${subTotalAmoun}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.813" level="INFO">AED 19</msg>
+<status status="PASS" starttime="20230410 19:55:21.813" endtime="20230410 19:55:21.813"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${stdshipping}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.813" level="INFO">AED 18</msg>
+<status status="PASS" starttime="20230410 19:55:21.813" endtime="20230410 19:55:21.813"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${codAmoun}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.813" level="INFO">AED 10</msg>
+<status status="PASS" starttime="20230410 19:55:21.813" endtime="20230410 19:55:21.813"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${totalAmoun}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.814" level="INFO">AED 47</msg>
+<status status="PASS" starttime="20230410 19:55:21.813" endtime="20230410 19:55:21.814"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:16.567" endtime="20230410 19:55:21.814"/>
+</kw>
+<kw name="Click Place Order Button" library="PaymentPage">
+<kw name="Get Current Date" library="DateTime">
+<var>${CurrentDate}</var>
+<arg>result_format=%S%H%M%d%m%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230410 19:55:21.815" level="INFO">${CurrentDate} = 21195510042023</msg>
+<status status="PASS" starttime="20230410 19:55:21.814" endtime="20230410 19:55:21.815"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CurrentDate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230410 19:55:21.815" level="INFO">21195510042023</msg>
+<status status="PASS" starttime="20230410 19:55:21.815" endtime="20230410 19:55:21.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:24.817" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:21.815" endtime="20230410 19:55:24.818"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PlaceOrder}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230410 19:55:24.840" level="INFO">Element 'xpath://button[@id='checkout-form-submit004']' is displayed.</msg>
+<status status="PASS" starttime="20230410 19:55:24.818" endtime="20230410 19:55:24.841"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PlaceOrder}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:24.841" level="INFO">Clicking element 'xpath://button[@id='checkout-form-submit004']'.</msg>
+<status status="PASS" starttime="20230410 19:55:24.841" endtime="20230410 19:55:32.965"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:21.814" endtime="20230410 19:55:32.965"/>
+</kw>
+<kw name="Close Rating POP-UP Window In Thank You Page" library="ThankYouPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:37.968" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:32.966" endtime="20230410 19:55:37.968"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CloseRatingPopUp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:37.969" level="INFO">Clicking element 'xpath://*[@id='nps-modal-close']'.</msg>
+<status status="PASS" starttime="20230410 19:55:37.968" endtime="20230410 19:55:38.025"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:32.965" endtime="20230410 19:55:38.025"/>
+</kw>
+<kw name="Click Order Number HyperLink" library="OrderDetailsPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OrderNumberHyperLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:38.026" level="INFO">Clicking element 'xpath://*[@id='main-part']/div[1]/section[1]/header/p[1]/a'.</msg>
+<status status="PASS" starttime="20230410 19:55:38.026" endtime="20230410 19:55:40.841"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:38.026" endtime="20230410 19:55:40.841"/>
+</kw>
+<kw name="Capture Order Number" library="OrderDetailsPage">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${OrderNumberText}</var>
+<arg>${OrderNumber}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:40.988" level="INFO">${OrderNumberText} = Order#9425663857</msg>
+<status status="PASS" starttime="20230410 19:55:40.841" endtime="20230410 19:55:40.988"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:40.841" endtime="20230410 19:55:40.988"/>
+</kw>
+<kw name="Click Cancel Items Link" library="OrderDetailsPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:43.989" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:40.988" endtime="20230410 19:55:43.989"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CancelItems}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:43.990" level="INFO">Clicking element 'id:cancel-items-link'.</msg>
+<status status="PASS" starttime="20230410 19:55:43.989" endtime="20230410 19:55:44.046"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:40.988" endtime="20230410 19:55:44.046"/>
+</kw>
+<kw name="Click Select All Product Checkbox" library="OrderDetailsPage">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:45.047" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230410 19:55:44.047" endtime="20230410 19:55:45.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectAllProductCheckbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:45.049" level="INFO">Clicking element 'id:select-all-products-for-cancel'.</msg>
+<status status="PASS" starttime="20230410 19:55:45.048" endtime="20230410 19:55:45.099"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:44.046" endtime="20230410 19:55:45.099"/>
+</kw>
+<kw name="Choose Cancel Reason" library="OrderDetailsPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CancelReasonDropDown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:45.100" level="INFO">Clicking element 'xpath://*[@id='cancel-return-form']/div[2]/div/span/span[1]'.</msg>
+<status status="PASS" starttime="20230410 19:55:45.100" endtime="20230410 19:55:45.155"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CancelReason}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:45.155" level="INFO">Clicking element 'xpath://span[text()='The price is too high']'.</msg>
+<status status="PASS" starttime="20230410 19:55:45.155" endtime="20230410 19:55:45.211"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:45.099" endtime="20230410 19:55:45.212"/>
+</kw>
+<kw name="Click Cancel Button And Cancel The Order" library="OrderDetailsPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CancelButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230410 19:55:45.212" level="INFO">Clicking element 'id:cancel-items-btn'.</msg>
+<status status="PASS" starttime="20230410 19:55:45.212" endtime="20230410 19:55:47.931"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230410 19:55:52.932" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230410 19:55:47.931" endtime="20230410 19:55:52.932"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:45.212" endtime="20230410 19:55:52.932"/>
+</kw>
+<kw name="Close The WebBrowser" library="WebBrowser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230410 19:55:52.933" endtime="20230410 19:55:53.255"/>
+</kw>
+<status status="PASS" starttime="20230410 19:55:52.932" endtime="20230410 19:55:53.255"/>
+</kw>
+<doc>This script will execute place the reg user hd cod order : Areas Covered [Sign-in,Search,PLP,PDP,Add To Basket,Checkout Now,Choose HD,Choose COD Payment, Place the order]</doc>
+<tag>Homecentre - ae -</tag>
+<tag>Regression</tag>
+<status status="PASS" starttime="20230410 19:54:18.564" endtime="20230410 19:55:53.255"/>
+</test>
+<status status="PASS" starttime="20230410 19:54:18.255" endtime="20230410 19:55:53.255"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Homecentre - ae -</stat>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CODPaymentTest">CODPaymentTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

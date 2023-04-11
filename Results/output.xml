@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.5 on darwin)" generated="20221031 20:39:51.342" rpa="false" schemaversion="3">
+<suite id="s1" name="CODPaymentTest" source="/Users/rajesh/PycharmProjects/pythonProjectrobot/Tests/Landmark/CODPaymentTest.robot">
+<test id="s1-t1" name="TC_001_Verify That The Register User Is Able To Place COD Order With Home Delivery Shipping Method" line="29">
+<kw name="Open The Web Browser" library="WebBrowser" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20221031 20:39:51.617" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20221031 20:39:53.706" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20221031 20:39:53.706" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 104
+Current browser version is 107.0.5304.87 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010ff48149 chromedriver + 4469065
+1   chromedriver                        0x000000010fed2233 chromedriver + 3985971
+2   chromedriver                        0x000000010fb68fe8 chromedriver + 409576
+3   chromedriver                        0x000000010fb90683 chromedriver + 571011
+4   chromedriver                        0x000000010fb8c00e chromedriver + 552974
+5   chromedriver                        0x000000010fb88257 chromedriver + 537175
+6   chromedriver                        0x000000010fbc2980 chromedriver + 776576
+7   chromedriver                        0x000000010fbbcb53 chromedriver + 752467
+8   chromedriver                        0x000000010fb92905 chromedriver + 579845
+9   chromedriver                        0x000000010fb93955 chromedriver + 584021
+10  chromedriver                        0x000000010ff196ad chromedriver + 4277933
+11  chromedriver                        0x000000010ff1db3a chromedriver + 4295482
+12  chromedriver                        0x000000010ff22cdf chromedriver + 4316383
+13  chromedriver                        0x000000010ff1e857 chromedriver + 4298839
+14  chromedriver                        0x000000010fef764f chromedriver + 4138575
+15  chromedriver                        0x000000010ff391f8 chromedriver + 4407800
+16  chromedriver                        0x000000010ff3937f chromedriver + 4408191
+17  chromedriver                        0x000000010ff4fcb5 chromedriver + 4500661
+18  libsystem_pthread.dylib             0x00007ff8191304f4 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff81912c00f thread_start + 15
+</msg>
+<status status="FAIL" starttime="20221031 20:39:51.617" endtime="20221031 20:39:53.712"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Environment}&quot; == &quot;UAT1&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Homecentre_Uat1_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.713" endtime="20221031 20:39:53.713"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.712" endtime="20221031 20:39:53.713"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Max_Uat1_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.713" endtime="20221031 20:39:53.713"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.713" endtime="20221031 20:39:53.713"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Centrepoint_Uat1_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.713" endtime="20221031 20:39:53.713"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.713" endtime="20221031 20:39:53.713"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Babyshop_Uat1_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</branch>
+<status status="NOT RUN" starttime="20221031 20:39:53.712" endtime="20221031 20:39:53.714"/>
+</if>
+<status status="NOT RUN" starttime="20221031 20:39:53.712" endtime="20221031 20:39:53.714"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;BETA&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Homecentre_Beta_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.714"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Max_Beta_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.715" endtime="20221031 20:39:53.715"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.715"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Centrepoint_Beta_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.715" endtime="20221031 20:39:53.715"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.715" endtime="20221031 20:39:53.715"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Babyshop_Beta_URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.716" endtime="20221031 20:39:53.716"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.716" endtime="20221031 20:39:53.716"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.717"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.717"/>
+</branch>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.717"/>
+</if>
+<status status="NOT RUN" starttime="20221031 20:39:53.714" endtime="20221031 20:39:53.717"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Environment}&quot; == &quot;PROD&quot;">
+<if>
+<branch type="IF" condition="&quot;${Concept}&quot; == &quot;Homecentre&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Homecentre_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.718"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.718"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Max&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Max_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Centrepoint&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Centrepoint_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${Concept}&quot; == &quot;Babyshop&quot;">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Babyshop_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the concept name and verify you are given proper concept name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.718" endtime="20221031 20:39:53.718"/>
+</branch>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.718"/>
+</if>
+<status status="NOT RUN" starttime="20221031 20:39:53.717" endtime="20221031 20:39:53.719"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" library="BuiltIn">
+<arg>Please verify the environment name and verify you are given proper environment name</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.719" endtime="20221031 20:39:53.719"/>
+</kw>
+<status status="NOT RUN" starttime="20221031 20:39:53.719" endtime="20221031 20:39:53.719"/>
+</branch>
+<status status="NOT RUN" starttime="20221031 20:39:53.712" endtime="20221031 20:39:53.719"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.719" endtime="20221031 20:39:53.719"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20221031 20:39:53.719" endtime="20221031 20:39:53.719"/>
+</kw>
+<status status="FAIL" starttime="20221031 20:39:51.617" endtime="20221031 20:39:53.719"/>
+</kw>
+<kw name="Close The WebBrowser" library="WebBrowser" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221031 20:39:53.720" endtime="20221031 20:39:53.720"/>
+</kw>
+<status status="PASS" starttime="20221031 20:39:53.720" endtime="20221031 20:39:53.721"/>
+</kw>
+<doc>This script will execute place the reg user hd cod order : Areas Covered [Sign-in,Search,PLP,PDP,Add To Basket,Checkout Now,Choose HD,Choose COD Payment, Place the order]</doc>
+<tag>Homecentre - ae -</tag>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20221031 20:39:51.616" endtime="20221031 20:39:53.721">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 104
+Current browser version is 107.0.5304.87 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Stacktrace:
+0   chromedriver                        0x000000010ff48149 chromedriver + 4469065
+1   chromedriver                        0x000000010fed2233 chromedriver + 3985971
+2   chromedriver                        0x000000010fb68fe8 chromedriver + 409576
+3   chromedriver                        0x000000010fb90683 chromedriver + 571011
+4   chromedriver                        0x000000010fb8c00e chromedriver + 552974
+5   chromedriver                        0x000000010fb88257 chromedriver + 537175
+6   chromedriver                        0x000000010fbc2980 chromedriver + 776576
+7   chromedriver                        0x000000010fbbcb53 chromedriver + 7...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x000000010fb93955 chromedriver + 584021
+10  chromedriver                        0x000000010ff196ad chromedriver + 4277933
+11  chromedriver                        0x000000010ff1db3a chromedriver + 4295482
+12  chromedriver                        0x000000010ff22cdf chromedriver + 4316383
+13  chromedriver                        0x000000010ff1e857 chromedriver + 4298839
+14  chromedriver                        0x000000010fef764f chromedriver + 4138575
+15  chromedriver                        0x000000010ff391f8 chromedriver + 4407800
+16  chromedriver                        0x000000010ff3937f chromedriver + 4408191
+17  chromedriver                        0x000000010ff4fcb5 chromedriver + 4500661
+18  libsystem_pthread.dylib             0x00007ff8191304f4 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff81912c00f thread_start + 15</status>
+</test>
+<status status="FAIL" starttime="20221031 20:39:51.343" endtime="20221031 20:39:53.726"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Homecentre - ae -</stat>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="CODPaymentTest">CODPaymentTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
